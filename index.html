@@ -12,6 +12,21 @@
     <title>Document</title>
 </head>
 <body>
+
+  <!--contenedor para la ventata popup-->
+
+  <section>
+    <div class="ventana-popup" id="ventana-popup">
+      <div class="popup" id="popup">
+        <button class="btn-close" id="btn-close"> <i class="fa-solid fa-x"></i></button>
+        <p>Subscribe and get 20% off on the 4-class pottery pack</p>
+        
+        <input type="email" class="email" placeholder="Your email"> 
+        <button class="suscribete" id="suscribite">Suscribe</button>
+
+      </div>
+    </div>
+  </section>
     <!--menu de navegacion-->
 
     <nav class="navbar navbar-expand-lg bg-body-white container" > 
@@ -61,13 +76,26 @@
       </nav>
 <!--hero-->
       <header>
-        <div class="col-6 contenedor-h1">
-           
-        <h1> A pottery studio dedicated to creativity and community. </h1>
-   
-        <button type="button" class="btn btn-dark rounded-pill " id="boton-header">TAKE A CLASS</button>
-   
-        </div>
+        <div class="carrouselcontainer" id="carrouselcontainer">
+        
+           <div class="carrousel-imagenes" id="carrousel-imagenes">
+
+            <div class="carrousel-img">
+              <img src="carrusel 1.jpg" alt="">
+            <p> A pottery studio dedicated to creativity and community. </p>
+          </div>
+          <div class="carrousel-img">
+            <img src="ceramica carrousel1.jpg" alt="">
+            <p> A Space for Relaxation and Peace.</p>
+          </div>
+          <div class="carrousel-img">
+            <img src="ceramica carrousel2.jpg" alt="">
+            <p>Join us on this Journey where you will learn the Oldest Art.</p>
+          </div>
+          <button class="btn-carusel carrusel-buttonantes" id="button-antes"><i class="fa-thin fa-arrow-left"></i></button>
+          <button class=" btn-carusel carrusel-buttondsp" id="button-dsp"><i class="fa-thin fa-arrow-right"></i></button>
+          </div>
+           </div>
 
       </header>
       <main>
@@ -75,9 +103,15 @@
         <section class="container sobresarah"> 
             <div class="container"> 
  
-            <p>Sarah Glass Ceramics is a women-owned pottery studio located in fort Lauderdale. Our mission is to provide everyone of all skill levels a strong fundation and supportive environmentto experience the relaxing art of pottery making, we are happy to provide studio space and equipment to let you channel your inner artist. </p>
-            <button type="button" class="btn btn-link vermas">LEARN MORE</button>
-        </div> 
+            <p class="parrafo" id="parrafo"> Sarah Glass Ceramics is a women-owned pottery studio located in fort Lauderdale. Our mission is to provide everyone of all skill levels a strong fundation and supportive environmentto experience the relaxing art of pottery making, we are happy to provide studio space and equipment to let you channel your inner artist. 
+             <span class="mas-texto" id="mas-texto"> Sarah Glass Ceramics is a women-owned pottery studio located in Fort Lauderdale, Florida. Founded by Sarah, an experienced and passionate ceramic artist, our studio is a welcoming space for individuals of all backgrounds and skill levels. Whether you're a complete beginner or an experienced potter, our mission is to offer you a strong foundation in ceramics while fostering a nurturing, creative environment. We believe in the transformative power of pottery to relax the mind, heal the spirit, and connect with your inner creativity.
+
+              Our studio is fully equipped with professional pottery wheels, kilns, and all the necessary tools for your ceramics journey. Sarah and her team are dedicated to providing personalized guidance, ensuring that you have the support and resources you need to succeed. Beyond just learning techniques, we strive to create a community where individuals can come together, share ideas, and explore their creative potential in a collaborative and inspiring atmosphere.
+              
+              Join us for classes, workshops, or open studio sessions, and immerse yourself in the timeless art of pottery making. Let Sarah Glass Ceramics be your creative sanctuary where you can explore the wonders of clay and create something uniquely yours. 
+            </span></p>
+            <button id="boton-leer-mas" class="boton-leer-mas"> Read More</button>
+            </div> 
         </section>
         
         <!--cards superior-->
@@ -190,6 +224,10 @@
     </div>
 
     </section>
+
+
+
+    <script src="app.js"></script>
 </body>
 <footer>
     <!--menu navegacion footer-->

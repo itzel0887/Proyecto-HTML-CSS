@@ -45,79 +45,189 @@ border-radius: 10%;
     cursor: pointer;
 }
 
-header{
-   display: flex;
-    background-image: url(./hero\ definitivo.jpeg);
-    max-width: 100%;
-    height:500px;
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+/*ESTILOS VENTANA POPUP */
+
+.ventana-popup{
     position: relative;
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    background-color: #f2ede4 ;
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+
     
 }
-.contenedor-h1{
-position: relative;
-    display: grid;
-    justify-items: start;
-    flex-direction: column;
-    margin-bottom: 300px;
-    position:relative;
-    max-width: 100%;
-  justify-content: flex-start
+.popup{
+    padding: 5%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-close{
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+}
+.email{
+width: 300px;
+height: 30px;
+font-size: 25px;
+    
+}
+.suscribete{
+    border-radius: 5px;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    font-size: 25px;
+    background-color: #121212;
+    color: #f2ede4;
+
+}
+
+/*ESTILOS PARA EL CARRUSEL*/
+
+
+
+.carrouselcontainer{
+
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+.carrousel-imagenes{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
   
 
+
 }
- h1{
-    
-    left:-500px;
-    padding: 20%;
-    color: white;
-    font-family:'Times New Roman', Times, serif;
-    max-height: 400px;
-    flex-direction: column;
-    text-align:left;
-    font-size: 50px;
-    font-weight: lighter;
-   
- }
+.carrousel-img {
+position:relative;
+flex-shrink: 0;
+display:none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
 
- #boton-header{
+}
+.carrousel-img.active {
+
+    display: flex;
+}
+
+.carrousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrousel-img p{
+   position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #f2ede4;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+    z-index: 2;
+}
+
+.btn-carusel{
     position: absolute;
-    left: -300px;
-   justify-items:start;
-   align-items: start;
-   top: 400px;
-   max-width: 120px;    
-   height:40px;
-   font-size: 12px;
-   font-weight: bolder;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10px;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-   
- }
+}
+.btn-carusel i{
     
- .contenedor-h1{
-   max-width: 100%;
-   height: auto;
+font-size: 1px;
+justify-content: center;
 
+}
+.btn-carusel:hover{
+    background-color:rgba (0, 0, 0, 0.7);
+}
+.carrusel-buttonantes{
+left: 10px;
+}
+.carrusel-buttondsp{
+    right: 10px;
+}
+.carrusel-buttonantes::before{
+    font-size: 2rem;
+    content: '\2190';
+}
+.carrusel-buttondsp::before{
+    content: '\2192';
+    font-size: 2rem;
+}
+
+ .container{
+
+    position: relative
  }
-.sobresarah{
-    max-width: 50%;
+
+/*ESTILOS PARA EL PARRAFO ADICIONAL "LEER MAS"*/
+.parrafo{
+    max-width: 100%;
     height: auto;
     font-size: 19px;
     justify-content: center;
-    text-align:center;
-    padding-top: 5%;
+    text-align:justify;
+    padding-top:5%;
     
 }
+.mas-texto{
+    display: none;
+    width: 100%;
+    text-align:justify;
+    align-items: center;
+    
 
-.vermas{
-    justify-content: center;
-    text-align: center;
-    margin-left: 40px;
-    margin-top: 20px;
-    font-size: 15px;
+
+}
+
+
+.boton-leer-mas{
+   position: relative;
+   left: 50%;
+    top: -55px;
     text-decoration: none;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
     color: blue;
 
 }
@@ -155,7 +265,7 @@ position: relative;
 
 .subtitulo-inferior{
    
-    color: white;
+    color:black;
     justify-content: center;
     text-align: center;
     font-family:'Times New Roman', Times, serif;
@@ -169,7 +279,7 @@ position: relative;
     margin-top:-35px;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: black;
     font-size: 25px;
 
 }
@@ -185,7 +295,7 @@ position: relative;
     margin-left: 250px;
     border: 1px solid white;
     border-radius:10px;
-    color: wihte;
+    color: black;
     background-color: transparent;
 }
 .btn-dark{
@@ -198,10 +308,10 @@ position: relative;
 #piepagina{
     background-color: #121212;
     padding: 10px;
-    color: white;
+    color:black;
 
 }
-#navbarText-2{
+#navbarText-2{  
     color: white;
 }
 
@@ -209,6 +319,11 @@ position: relative;
     color: white;
 }
 
+
+.footer{
+background-color: burlywood;
+
+}
 
 .MENUFOOTER{
     display: flex;
